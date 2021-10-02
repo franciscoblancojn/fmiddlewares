@@ -21,7 +21,7 @@ const validateArray = (value) => {
 }
 const validateList = (value,list) => {
     if(!list.includes(value)){
-        throw "value invalid, expected ["+list.join(";")+"]"
+        throw "value invalid, expected ["+list.join(",")+"]"
     }
 }
 
