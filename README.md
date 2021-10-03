@@ -258,3 +258,8 @@ fmiddlewares.validateItem({
 [Gitlab franciscoblancojn](https://gitlab.com/franciscoblancojn)
 
 [Email blancofrancisco34@gmail.com](mailto:blancofrancisco34@gmail.com)
+
+## Repositories
+
+- [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares)
+- [Github](https://github.com/franciscoblancojn/fmiddlewares)
