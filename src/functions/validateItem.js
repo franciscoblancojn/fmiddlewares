@@ -29,6 +29,13 @@ const validateEmail = (value) => {
         throw "is not email"
     }
 }
+const validatePassword = (value,regexs) => {
+    regexs.forEach(element => {
+        if(!element.regex.test(value)){
+            throw element.msj
+        }
+    });
+}
 
 const validateForType = (settings,value) => {
     if(!settings.isNull){
@@ -42,6 +49,7 @@ const validateForType = (settings,value) => {
         "array" : (element) =>   {validateArray(element)},
         "list" : (element) =>    {validateList(element,settings.list)},
         "email" : (element) =>    {validateEmail(element)},
+        "password" : (element) =>    {validatePassword(element,settings.regexs)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
