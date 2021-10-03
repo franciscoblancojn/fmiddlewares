@@ -36,6 +36,16 @@ const validatePassword = (value,regexs) => {
         }
     });
 }
+const validateMinMax = (element,settings) => {
+    if(settings.min){
+        if(element < min){
+            throw ", min "+ min
+        }if(element > max){
+            throw ", max "+ max
+        }
+    }
+}
+
 
 const validateForType = (settings,value) => {
     if(!settings.isNull){
@@ -46,13 +56,7 @@ const validateForType = (settings,value) => {
         "string" : (element) =>  {validateTipeOf("string",element)},
         "number" : (element) =>  {
             validateTipeOf("number",element)
-            if(settings.min){
-                if(element < min){
-                    throw ", min "+ min
-                }if(element > max){
-                    throw ", max "+ max
-                }
-            }
+            validateMinMax(element,settings)
         },
         "object" : (element) =>  {validateTipeOf("object",element)},
         "array" : (element) =>   {validateArray(element)},
