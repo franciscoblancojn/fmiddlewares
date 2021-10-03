@@ -22,6 +22,7 @@ It is a library for nodejs that allows to make validations to the routes in a si
     - [Array](#array)
     - [Compare](#compare)
 - [Developer](#developer)
+- [Repositories](#repositories)
 
 
 ## Installing
@@ -258,3 +259,8 @@ fmiddlewares.validateItem({
 [Gitlab franciscoblancojn](https://gitlab.com/franciscoblancojn)
 
 [Email blancofrancisco34@gmail.com](mailto:blancofrancisco34@gmail.com)
+
+## Repositories
+
+- [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares)
+- [Github](https://github.com/franciscoblancojn/fmiddlewares)
