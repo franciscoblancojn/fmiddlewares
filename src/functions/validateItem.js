@@ -44,7 +44,16 @@ const validateForType = (settings,value) => {
     const switchSettings = {
         "boolean" : (element) => {validateTipeOf("boolean",element)},
         "string" : (element) =>  {validateTipeOf("string",element)},
-        "number" : (element) =>  {validateTipeOf("number",element)},
+        "number" : (element) =>  {
+            validateTipeOf("number",element)
+            if(settings.min){
+                if(element < min){
+                    throw ", min "+ min
+                }if(element > max){
+                    throw ", max "+ max
+                }
+            }
+        },
         "object" : (element) =>  {validateTipeOf("object",element)},
         "array" : (element) =>   {validateArray(element)},
         "list" : (element) =>    {validateList(element,settings.list)},
