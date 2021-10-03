@@ -45,7 +45,11 @@ const validateMinMax = (element,settings) => {
         }
     }
 }
-
+const validateCompare = (element,settings) => {
+    if(element !== settings.value){
+        throw ", invalid value"
+    }
+}
 
 const validateForType = (settings,value) => {
     if(!settings.isNull){
@@ -63,6 +67,7 @@ const validateForType = (settings,value) => {
         "list" : (element) =>    {validateList(element,settings.list)},
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
+        "compare": (element) =>   {validateCompare(element,settings)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
