@@ -24,6 +24,11 @@ const validateList = (value,list) => {
         throw "value invalid, expected ["+list.join(",")+"]"
     }
 }
+const validateEmail = (value) => {
+    if (!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(value))){
+        throw "is not email"
+    }
+}
 
 const validateForType = (settings,value) => {
     if(!settings.isNull){
@@ -36,6 +41,7 @@ const validateForType = (settings,value) => {
         "object" : (element) =>  {validateTipeOf("object",element)},
         "array" : (element) =>   {validateArray(element)},
         "list" : (element) =>    {validateList(element,settings.list)},
+        "email" : (element) =>    {validateEmail(element)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
