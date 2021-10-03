@@ -36,6 +36,20 @@ const validatePassword = (value,regexs) => {
         }
     });
 }
+const validateMinMax = (element,settings) => {
+    if(settings.min){
+        if(element < min){
+            throw ", min "+ min
+        }if(element > max){
+            throw ", max "+ max
+        }
+    }
+}
+const validateCompare = (element,settings) => {
+    if(element !== settings.value){
+        throw ", invalid value"
+    }
+}
 
 const validateForType = (settings,value) => {
     if(!settings.isNull){
@@ -44,12 +58,16 @@ const validateForType = (settings,value) => {
     const switchSettings = {
         "boolean" : (element) => {validateTipeOf("boolean",element)},
         "string" : (element) =>  {validateTipeOf("string",element)},
-        "number" : (element) =>  {validateTipeOf("number",element)},
+        "number" : (element) =>  {
+            validateTipeOf("number",element)
+            validateMinMax(element,settings)
+        },
         "object" : (element) =>  {validateTipeOf("object",element)},
         "array" : (element) =>   {validateArray(element)},
         "list" : (element) =>    {validateList(element,settings.list)},
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
+        "compare": (element) =>   {validateCompare(element,settings)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
