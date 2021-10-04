@@ -52,6 +52,11 @@ const validateCompare = (element,settings) => {
 }
 
 const validateForType = (settings,value) => {
+    if(settings.isUndefined === true){
+        if(value === undefined){
+            return;
+        }
+    }
     if(!settings.isNull){
         validateNull(value)
     }

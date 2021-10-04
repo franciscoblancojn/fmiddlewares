@@ -21,6 +21,7 @@ It is a library for nodejs that allows to make validations to the routes in a si
     - [Boolean](#boolean)
     - [Array](#array)
     - [Compare](#compare)
+    - [Leave Undefined](#leave-undefined)
 - [Developer](#developer)
 - [Repositories](#repositories)
 
@@ -248,6 +249,16 @@ fmiddlewares.validateItem({
     element : {
         type:"compare",
         value:"value"
+    }
+})
+```
+
+### Leave Undefined
+```javascript
+fmiddlewares.validateItem({
+    company : {
+        type:"string",
+        isUndefined:true
     }
 })
 ```
