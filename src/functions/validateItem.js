@@ -93,7 +93,7 @@ const validateItemsRecursive = (items,values) => {
         } catch (error) {
             throw key + ", "+ error
         }
-        if(item.type == "object"){
+        if(item.type == "object" && item.items != undefined){
             validateItemsRecursive(item.items,value)
         }
     })
