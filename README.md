@@ -21,6 +21,7 @@ It is a library for nodejs that allows to make validations to the routes in a si
     - [Boolean](#boolean)
     - [Array](#array)
     - [Compare](#compare)
+    - [Leave Undefined](#leave-undefined)
 - [Developer](#developer)
 - [Repositories](#repositories)
 
