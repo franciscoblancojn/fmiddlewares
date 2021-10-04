@@ -252,6 +252,16 @@ fmiddlewares.validateItem({
 })
 ```
 
+### Leave Undefined
+```javascript
+fmiddlewares.validateItem({
+    company : {
+        type:"string",
+        isUndefined:true
+    }
+})
+```
+
 
 ## Developer
 [Francisco Blanco](https://franciscoblanco.vercel.app/)
