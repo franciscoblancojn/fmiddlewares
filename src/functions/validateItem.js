@@ -83,7 +83,24 @@ const validateForType = (settings,value) => {
     return true
 }
 
+const validateExactItems = (items,values) => {
+    delete items.exactItems
+    const keysExact = Object.keys(items)
+    const keys = Object.keys(values).filter((element)=>{
+        return !keysExact.includes(element)
+    })
+    
+    if(keys.length > 0){
+        throw `data not allowed, [${keys.join(",")}]`
+    }
+}
+
 const validateItemsRecursive = (items,values) => {
+    if(items.exactItems){
+        validateExactItems(items,values)
+        delete items.exactItems
+        return;
+    }
     const keys = Object.keys(items)
     keys.forEach(key => {
         const value = values[key]
@@ -98,7 +115,6 @@ const validateItemsRecursive = (items,values) => {
         }
     })
 }
-
 const validateItem = (items,body="body") => (req,res,next) => {
     try {
         const values = req[body]
