@@ -23,6 +23,16 @@ It is a library for nodejs that allows to make validations to the routes in a si
     - [Compare](#compare)
     - [Leave Undefined](#leave-undefined)
     - [Exact Data](#exact-data)
+    - [Group](#group)
+        - [Group with string](#group-with-string)
+        - [Group with email](#group-with-email)
+        - [Group with password](#group-with-password)
+        - [Group with list](#group-with-list)
+        - [Group with number](#group-with-number)
+        - [Group with boolean](#group-with-boolean)
+        - [Group with array](#group-with-array)
+        - [Group with Leave Undefined](#group-with-leave-undefined)
+        - [Group with exactItems](#group-with-exactItems)
 - [Developer](#developer)
 - [Repositories](#repositories)
 
@@ -285,6 +295,180 @@ fmiddlewares.validateItem({
     }
 })
 ```
+
+### Group
+
+#### Group with string
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"string",
+        items:[
+            "id",
+            "name",
+            "phone"
+        ]
+    }
+})
+```
+
+#### Group with email
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"email",
+        items:[
+            "email",
+            "email_user",
+            "email_login"
+        ],
+    }
+})
+```
+
+#### Group with password
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"password",
+        items:[
+            "password",
+            "password_user",
+            "password_login"
+        ],
+        regexs:[
+            {
+                regex:/^.{8,}$/,
+                msj:"minimum of 8 characters"
+            },
+            {
+                regex:/[a-z]/,
+                msj:"must contain lowercase letters"
+            },
+            {
+                regex:/[A-Z]/,
+                msj:"must contain capital letters"
+            },
+        ]
+    }
+})
+```
+
+#### Group with list
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"list",
+        items:[
+            "var1",
+            "var2",
+            "var3"
+        ],
+        list:[
+            "option1",
+            "option2",
+            "option3",
+        ]
+    }
+})
+```
+
+#### Group with number
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"number",
+        items:[
+            "age",
+            "nitems",
+            "price"
+        ],
+        min: 10, // if need min
+        max: 20  // id need max
+    }
+})
+```
+
+#### Group with boolean
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"boolean",
+        items:[
+            "active",
+            "show",
+            "open"
+        ],
+    }
+})
+```
+
+#### Group with array
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"array",
+        items:[
+            "items",
+            "list",
+            "card"
+        ],
+    }
+})
+```
+
+#### Group with compare
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"compare",
+        items:[
+            "key",
+            "key2",
+        ],
+        value:"value"
+    }
+})
+```
+
+#### Group with Leave Undefined
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"string",
+        items:[
+            "name",
+            "phone",
+        ],
+        isUndefined:true
+    }
+})
+```
+
+#### Group with exactItems
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+        type:"group",
+        groupType:"string",
+        items:[
+            "name",
+            "phone",
+        ],
+        exactItems:true,
+    }
+})
+```
+
 
 ## Developer
 [Francisco Blanco](https://franciscoblanco.vercel.app/)
