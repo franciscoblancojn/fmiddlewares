@@ -50,14 +50,38 @@ const validateCompare = (element,settings) => {
         throw ", invalid value"
     }
 }
+const validateGroup = (values,settings) => {
+    const keys = settings.items
+    const newSettings = {
+        ...settings,
+        type : settings.groupType
+    }
+    delete newSettings.items
+    delete newSettings.groupType
+    
+    if(newSettings.exactItems){
+        validateExactItems(keys,values)
+        delete newSettings.exactItems
+    }
 
-const validateForType = (settings,value) => {
-    if(settings.isUndefined === true){
+    for (var i = 0; i < keys.length; i++) {
+        const key = keys[i];
+        try {
+            validateForType(newSettings,values[key],values)
+        } catch (error) {
+            throw key +" "+ error
+        }
+    }
+}
+
+
+const validateForType = (settings,value,values) => {
+    if(settings.isUndefined === true && settings.type!="group"){
         if(value === undefined){
             return;
         }
     }
-    if(!settings.isNull){
+    if(!settings.isNull && settings.type!="group"){
         validateNull(value)
     }
     const switchSettings = {
@@ -73,6 +97,7 @@ const validateForType = (settings,value) => {
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
         "compare": (element) =>   {validateCompare(element,settings)},
+        "group": (element) =>   {validateGroup(values,settings)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
@@ -85,7 +110,12 @@ const validateForType = (settings,value) => {
 
 const validateExactItems = (items,values) => {
     delete items.exactItems
-    const keysExact = Object.keys(items)
+    var keysExact;
+    if(Array.isArray(items)){
+        keysExact = items
+    }else{
+        keysExact = Object.keys(items)
+    }
     const keys = Object.keys(values).filter((element)=>{
         return !keysExact.includes(element)
     })
@@ -99,14 +129,13 @@ const validateItemsRecursive = (items,values) => {
     if(items.exactItems){
         validateExactItems(items,values)
         delete items.exactItems
-        return;
     }
     const keys = Object.keys(items)
     keys.forEach(key => {
         const value = values[key]
         const item = items[key]
         try {
-            validateForType(item,value)
+            validateForType(item,value,values)
         } catch (error) {
             throw key + ", "+ error
         }
