@@ -22,6 +22,7 @@ It is a library for nodejs that allows to make validations to the routes in a si
     - [Array](#array)
     - [Compare](#compare)
     - [Leave Undefined](#leave-undefined)
+    - [Exact Data](#exact-data)
 - [Developer](#developer)
 - [Repositories](#repositories)
 
@@ -263,6 +264,27 @@ fmiddlewares.validateItem({
 })
 ```
 
+### Exact Data
+```javascript
+fmiddlewares.validateItem({
+    exactItems:true,
+    name : {
+        type:"string",
+    },
+    company:{
+        type:"object",
+        items:{
+            exactItems:true,
+            name:{
+                type:"text"
+            },
+            direction:{
+                type:"text"
+            }
+        }
+    }
+})
+```
 
 ## Developer
 [Francisco Blanco](https://franciscoblanco.vercel.app/)
