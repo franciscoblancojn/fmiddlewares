@@ -109,17 +109,17 @@ const validateForType = (settings,value,values) => {
 }
 
 const validateExactItems = (items,values) => {
-    delete items.exactItems
     var keysExact;
     if(Array.isArray(items)){
         keysExact = items
     }else{
         keysExact = Object.keys(items)
     }
+    
     const keys = Object.keys(values).filter((element)=>{
         return !keysExact.includes(element)
     })
-    
+
     if(keys.length > 0){
         throw `data not allowed, [${keys.join(",")}]`
     }
