@@ -50,14 +50,34 @@ const validateCompare = (element,settings) => {
         throw ", invalid value"
     }
 }
+const validateGroup = (values,settings) => {
+    const keys = settings.items
+    const newSettings = {
+        ...settings,
+        type : settings.groupType
+    }
+    delete newSettings.items
+    delete newSettings.groupType
+    
+    for (var i = 0; i < keys.length; i++) {
+        const key = keys[i];
+        try {
+            validateForType(newSettings,values[key],values)
+        } catch (error) {
+            throw key +" "+ error
+        }
+    }
+}
 
-const validateForType = (settings,value) => {
+
+const validateForType = (settings,value,values) => {
+    console.log(settings,value,values);
     if(settings.isUndefined === true){
         if(value === undefined){
             return;
         }
     }
-    if(!settings.isNull){
+    if(!settings.isNull && settings.type!="group"){
         validateNull(value)
     }
     const switchSettings = {
@@ -73,6 +93,7 @@ const validateForType = (settings,value) => {
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
         "compare": (element) =>   {validateCompare(element,settings)},
+        "group": (element) =>   {validateGroup(values,settings)},
     }
     if(switchSettings[settings.type]){
         switchSettings[settings.type](value)
@@ -106,7 +127,7 @@ const validateItemsRecursive = (items,values) => {
         const value = values[key]
         const item = items[key]
         try {
-            validateForType(item,value)
+            validateForType(item,value,values)
         } catch (error) {
             throw key + ", "+ error
         }
