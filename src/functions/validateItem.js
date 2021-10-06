@@ -76,8 +76,7 @@ const validateGroup = (values,settings) => {
 
 
 const validateForType = (settings,value,values) => {
-    console.log(settings,value,values);
-    if(settings.isUndefined === true){
+    if(settings.isUndefined === true && settings.type!="group"){
         if(value === undefined){
             return;
         }
