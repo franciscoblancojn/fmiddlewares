@@ -126,9 +126,13 @@ const validateExactItems = (items,values) => {
 }
 
 const validateItemsRecursive = (items,values) => {
-    if(items.exactItems){
-        validateExactItems(items,values)
-        delete items.exactItems
+    try {
+        if(items.exactItems){
+            validateExactItems(items,values)
+            delete items.exactItems
+        }
+    } catch (error) {
+        throw error
     }
     const keys = Object.keys(items)
     keys.forEach(key => {
