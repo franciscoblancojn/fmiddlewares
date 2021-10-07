@@ -1,6 +1,6 @@
 {
     "name": "fmiddlewares",
-    "version": "1.21.10.6.8",
+    "version": "1.21.10.6.9",
     "description": "It is a library for nodejs that allows to make validations to the routes in a simpler way",
     "author": "franciscoblancojn",
     "keywords": [
