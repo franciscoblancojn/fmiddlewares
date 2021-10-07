@@ -217,6 +217,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Number
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
