@@ -38,10 +38,13 @@ const validatePassword = (value,regexs) => {
 }
 const validateMinMax = (element,settings) => {
     if(settings.min){
-        if(element < min){
-            throw ", min "+ min
-        }if(element > max){
-            throw ", max "+ max
+        if(element < settings.min){
+            throw ", min "+ settings.min
+        }
+    }
+    if(settings.max){
+        if(element > settings.max){
+            throw ", max "+ settings.max
         }
     }
 }
@@ -161,4 +164,6 @@ const validateItem = (items,body="body") => (req,res,next) => {
     }
     next()
 }
-module.exports = validateItem
+module.exports = {
+    validateItem
+}
