@@ -470,6 +470,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with compare
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -484,6 +485,7 @@ fmiddlewares.validateItem({
 })
 ```
 ##### Group with compare and function
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
