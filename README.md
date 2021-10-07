@@ -259,6 +259,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Array
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/array.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/array.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     items : {
