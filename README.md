@@ -297,6 +297,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Leave Undefined
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/leaveUndefined.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/leaveUndefined.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     company : {
