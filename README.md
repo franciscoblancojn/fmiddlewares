@@ -227,6 +227,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Number with min
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
@@ -237,6 +238,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Number with max
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
