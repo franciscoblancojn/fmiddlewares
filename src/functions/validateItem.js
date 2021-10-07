@@ -38,10 +38,13 @@ const validatePassword = (value,regexs) => {
 }
 const validateMinMax = (element,settings) => {
     if(settings.min){
-        if(element < min){
-            throw ", min "+ min
-        }if(element > max){
-            throw ", max "+ max
+        if(element < settings.min){
+            throw ", min "+ settings.min
+        }
+    }
+    if(settings.max){
+        if(element > settings.max){
+            throw ", max "+ settings.max
         }
     }
 }
@@ -61,7 +64,6 @@ const validateGroup = (values,settings) => {
     
     if(newSettings.exactItems){
         validateExactItems(keys,values)
-        delete newSettings.exactItems
     }
 
     for (var i = 0; i < keys.length; i++) {
@@ -109,33 +111,38 @@ const validateForType = (settings,value,values) => {
 }
 
 const validateExactItems = (items,values) => {
-    delete items.exactItems
     var keysExact;
     if(Array.isArray(items)){
         keysExact = items
     }else{
         keysExact = Object.keys(items)
     }
+    
     const keys = Object.keys(values).filter((element)=>{
         return !keysExact.includes(element)
     })
-    
+
     if(keys.length > 0){
         throw `data not allowed, [${keys.join(",")}]`
     }
 }
 
 const validateItemsRecursive = (items,values) => {
-    if(items.exactItems){
-        validateExactItems(items,values)
-        delete items.exactItems
+    try {
+        if(items.exactItems){
+            validateExactItems(items,values)
+        }
+    } catch (error) {
+        throw error
     }
     const keys = Object.keys(items)
     keys.forEach(key => {
         const value = values[key]
         const item = items[key]
         try {
-            validateForType(item,value,values)
+            if(key != "exactItems"){
+                validateForType(item,value,values)
+            }
         } catch (error) {
             throw key + ", "+ error
         }
