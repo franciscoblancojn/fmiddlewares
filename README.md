@@ -515,6 +515,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with Leave Undefined
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/leaveUndefined.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/leaveUndefined.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
