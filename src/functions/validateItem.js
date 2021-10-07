@@ -48,7 +48,13 @@ const validateMinMax = (element,settings) => {
         }
     }
 }
-const validateCompare = (element,settings) => {
+const validateCompare = (element,settings,key) => {
+    if(settings.function){
+        if(!settings.function({value:element,key})){
+            throw ", invalid value"
+        }
+        return;
+    }
     if(element !== settings.value){
         throw ", invalid value"
     }
@@ -69,7 +75,7 @@ const validateGroup = (values,settings) => {
     for (var i = 0; i < keys.length; i++) {
         const key = keys[i];
         try {
-            validateForType(newSettings,values[key],values)
+            validateForType(newSettings,values[key],values,key)
         } catch (error) {
             throw key +" "+ error
         }
@@ -77,7 +83,7 @@ const validateGroup = (values,settings) => {
 }
 
 
-const validateForType = (settings,value,values) => {
+const validateForType = (settings,value,values,key) => {
     if(settings.isUndefined === true && settings.type!="group"){
         if(value === undefined){
             return;
@@ -98,7 +104,7 @@ const validateForType = (settings,value,values) => {
         "list" : (element) =>    {validateList(element,settings.list)},
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
-        "compare": (element) =>   {validateCompare(element,settings)},
+        "compare": (element) =>   {validateCompare(element,settings,key)},
         "group": (element) =>   {validateGroup(values,settings)},
     }
     if(switchSettings[settings.type]){
@@ -141,7 +147,7 @@ const validateItemsRecursive = (items,values) => {
         const item = items[key]
         try {
             if(key != "exactItems"){
-                validateForType(item,value,values)
+                validateForType(item,value,values,key)
             }
         } catch (error) {
             throw key + ", "+ error
