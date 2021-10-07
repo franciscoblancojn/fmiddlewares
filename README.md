@@ -108,6 +108,7 @@ router.post(
 )
 ```
 ## Validate
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/tree/master/src/routes) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/tree/master/src/routes)
 
 ### String
 ###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/string/string.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/string/string.routes.js)
