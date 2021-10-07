@@ -14,9 +14,27 @@ const validateEmpty = (value) => {
         throw "is empty"
     }
 }
-const validateArray = (value) => {
+const validateArray = (value,settings) => {
     if(!Array.isArray(value)){
         throw "type Invalid, expected Array"
+    }
+    if(settings.min){
+        if(value.length < settings.min){
+            throw "min elemets " + settings.min
+        }
+    }
+    if(settings.max){
+        if(value.length > settings.max){
+            throw "max elemets " + settings.max
+        }
+    }
+    if(settings.typeElemets){
+        for (var i = 0; i < value.length; i++) {
+            const element = value[i];
+            if(typeof element != settings.typeElemets){
+                throw `, element invalid [${element}], expected ${settings.typeElemets}`
+            }
+        }
     }
 }
 const validateList = (value,list) => {
@@ -100,7 +118,7 @@ const validateForType = (settings,value,values,key) => {
             validateMinMax(element,settings)
         },
         "object" : (element) =>  {validateTipeOf("object",element)},
-        "array" : (element) =>   {validateArray(element)},
+        "array" : (element) =>   {validateArray(element,settings)},
         "list" : (element) =>    {validateList(element,settings.list)},
         "email" : (element) =>    {validateEmail(element)},
         "password" : (element) =>    {validatePassword(element,settings.regexs)},
