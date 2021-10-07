@@ -32,6 +32,8 @@ It is a library for nodejs that allows to make validations to the routes in a si
         - [Group with number](#group-with-number)
         - [Group with boolean](#group-with-boolean)
         - [Group with array](#group-with-array)
+        - [Group with compare](#group-with-compare)
+            - [Group with compare and function](#group-with-compare-and-function)
         - [Group with Leave Undefined](#group-with-leave-undefined)
         - [Group with exactItems](#group-with-exactItems)
 - [Developer](#developer)
@@ -450,6 +452,34 @@ fmiddlewares.validateItem({
         ],
         value:"value"
     }
+})
+```
+##### Group with compare and function
+```javascript
+fmiddlewares.validateItem({
+    elements:{
+            type:"group",
+            groupType:"compare",
+            items:[
+                "key",
+                "key2",
+            ],
+            value:"value",
+            function: (compare) => {
+              switch (compare.key) {
+                case "key":
+                  return compare.value == "value1"
+                  break;
+                case "key2":
+                  return compare.value == "value2"
+                  break;
+                default:
+                  return false
+                  break;
+              }
+            }
+            //if use function, value is not use
+        }
 })
 ```
 
