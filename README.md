@@ -366,6 +366,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with password
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/password.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/password.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
