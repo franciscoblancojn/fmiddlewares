@@ -110,6 +110,7 @@ router.post(
 ## Validate
 
 ### String
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/string/string.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/string/string.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     name : {
@@ -119,6 +120,7 @@ fmiddlewares.validateItem({
 ```
 
 #### String, allow empty
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/string/stringEmpty.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/string/stringEmpty.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     name : {
