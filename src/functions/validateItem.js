@@ -64,7 +64,6 @@ const validateGroup = (values,settings) => {
     
     if(newSettings.exactItems){
         validateExactItems(keys,values)
-        delete newSettings.exactItems
     }
 
     for (var i = 0; i < keys.length; i++) {
@@ -132,7 +131,6 @@ const validateItemsRecursive = (items,values) => {
     try {
         if(items.exactItems){
             validateExactItems(items,values)
-            delete items.exactItems
         }
     } catch (error) {
         throw error
@@ -142,7 +140,9 @@ const validateItemsRecursive = (items,values) => {
         const value = values[key]
         const item = items[key]
         try {
-            validateForType(item,value,values)
+            if(key != "exactItems"){
+                validateForType(item,value,values)
+            }
         } catch (error) {
             throw key + ", "+ error
         }
