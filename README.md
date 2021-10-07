@@ -272,6 +272,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Compare
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     element : {
@@ -281,6 +282,7 @@ fmiddlewares.validateItem({
 })
 ```
 #### Compare with function
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     element : {
