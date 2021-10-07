@@ -308,6 +308,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Exact Data
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/exactData.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/exactData.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     exactItems:true,
