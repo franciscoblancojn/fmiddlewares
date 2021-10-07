@@ -164,6 +164,4 @@ const validateItem = (items,body="body") => (req,res,next) => {
     }
     next()
 }
-module.exports = {
-    validateItem
-}
+module.exports = validateItem
