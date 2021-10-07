@@ -4,13 +4,13 @@
     "description": "It is a library for nodejs that allows to make validations to the routes in a simpler way",
     "author": "franciscoblancojn",
     "keywords": [
-      "middleware",
-      "validate Body",
-      "validate Query",
-      "validate Headers"
+        "middleware",
+        "validate Body",
+        "validate Query",
+        "validate Headers"
     ],
     "repository": {
-      "type": "git",
-      "url": "https://gitlab.com/npmjs_packages/fmiddlewares"
+        "type": "git",
+        "url": "https://gitlab.com/npmjs_packages/fmiddlewares"
     }
-  }
+}
