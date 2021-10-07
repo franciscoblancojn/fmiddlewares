@@ -519,6 +519,10 @@ fmiddlewares.validateItem({
 })
 ```
 
+## Examples
+[https://github.com/franciscoblancojn/fmiddlewares.testing](https://github.com/franciscoblancojn/fmiddlewares.testing)
+
+[https://gitlab.com/npmjs_packages/fmiddlewares.testing](https://gitlab.com/npmjs_packages/fmiddlewares.testing)
 
 ## Developer
 [Francisco Blanco](https://franciscoblanco.vercel.app/)
