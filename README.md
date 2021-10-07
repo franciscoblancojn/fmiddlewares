@@ -131,6 +131,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Email
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/email.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/email.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     email : {
@@ -140,6 +141,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Password
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/password.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/password.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     password:{
