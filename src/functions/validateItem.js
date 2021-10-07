@@ -10,7 +10,7 @@ const validateNull = (value) => {
     }
 }
 const validateEmpty = (value) => {
-    if(value == ""){
+    if(value === ""){
         throw "is empty"
     }
 }
