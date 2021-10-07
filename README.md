@@ -531,6 +531,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with exactItems
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/exactItems.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/exactItems.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
