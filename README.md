@@ -108,8 +108,10 @@ router.post(
 )
 ```
 ## Validate
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/tree/master/src/routes) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/tree/master/src/routes)
 
 ### String
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/string/string.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/string/string.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     name : {
@@ -119,6 +121,7 @@ fmiddlewares.validateItem({
 ```
 
 #### String, allow empty
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/string/stringEmpty.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/string/stringEmpty.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     name : {
@@ -129,6 +132,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Email
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/email.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/email.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     email : {
@@ -138,6 +142,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Password
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/password.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/password.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     password:{
@@ -161,6 +166,7 @@ fmiddlewares.validateItem({
 ```
 
 ### List
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/list.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/list.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     sex : {
@@ -174,6 +180,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Object
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/object.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/object.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     user:{
@@ -211,6 +218,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Number
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
@@ -220,6 +228,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Number with min
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
@@ -230,6 +239,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Number with max
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     age : {
@@ -240,6 +250,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Boolean
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/boolean.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/boolean.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     married : {
@@ -249,6 +260,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Array
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/array.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/array.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     items : {
@@ -261,6 +273,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Compare
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     element : {
@@ -270,6 +283,7 @@ fmiddlewares.validateItem({
 })
 ```
 #### Compare with function
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     element : {
@@ -284,6 +298,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Leave Undefined
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/leaveUndefined.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/leaveUndefined.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     company : {
@@ -294,6 +309,7 @@ fmiddlewares.validateItem({
 ```
 
 ### Exact Data
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/exactData.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/exactData.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     exactItems:true,
@@ -316,8 +332,10 @@ fmiddlewares.validateItem({
 ```
 
 ### Group
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/tree/master/src/routes/group) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/tree/master/src/routes/group)
 
 #### Group with string
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/string.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/string.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -333,6 +351,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with email
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/email.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/email.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -348,6 +367,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with password
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/password.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/password.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -377,6 +397,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with list
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/list.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/list.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -397,6 +418,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with number
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/number.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/number.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -414,6 +436,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with boolean
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/boolean.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/boolean.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -429,6 +452,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with array
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/array.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/array.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -447,6 +471,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with compare
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -461,6 +486,7 @@ fmiddlewares.validateItem({
 })
 ```
 ##### Group with compare and function
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/compare.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/compare.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -490,6 +516,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with Leave Undefined
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/leaveUndefined.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/leaveUndefined.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -505,6 +532,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with exactItems
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/exactItems.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/exactItems.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
@@ -519,6 +547,10 @@ fmiddlewares.validateItem({
 })
 ```
 
+## Examples
+[https://github.com/franciscoblancojn/fmiddlewares.testing](https://github.com/franciscoblancojn/fmiddlewares.testing)
+
+[https://gitlab.com/npmjs_packages/fmiddlewares.testing](https://gitlab.com/npmjs_packages/fmiddlewares.testing)
 
 ## Developer
 [Francisco Blanco](https://franciscoblanco.vercel.app/)
