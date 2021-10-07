@@ -334,6 +334,7 @@ fmiddlewares.validateItem({
 ###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/tree/master/src/routes/group) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/tree/master/src/routes/group)
 
 #### Group with string
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/string.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/string.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
