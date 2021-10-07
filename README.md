@@ -350,6 +350,7 @@ fmiddlewares.validateItem({
 ```
 
 #### Group with email
+###### Example [Gitlab](https://gitlab.com/npmjs_packages/fmiddlewares.testing/-/blob/master/src/routes/group/email.routes.js) [Github](https://github.com/franciscoblancojn/fmiddlewares.testing/blob/master/src/routes/group/email.routes.js)
 ```javascript
 fmiddlewares.validateItem({
     elements:{
